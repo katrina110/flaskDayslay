@@ -11,6 +11,8 @@
     <!-- Custom CSS Link -->
     <link rel="stylesheet" href="css/styleabout.css">
     <link rel="stylesheet" href="css/sty.css">
+    <link rel="stylesheet"  typr="text/css" href="{{ url_for('static', filename= 'sty.css')}}">
+    <link rel="stylesheet" typr="text/css" href="{{ url_for('static', filename= 'styleabout.css')}}">
     
 
 </head>
@@ -22,8 +24,8 @@
         <nav class="navbar">
             <div id="close-navbar" class="fas fa-times"></div>
             <div>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <a href="{{ url_for('index')}}">Home</a>
+                <a href="{{ url_for('about')}}">About</a>
                 <a href="#feature">Feature</a>
                 <a href="#contact">Contact</a>
             </div>
