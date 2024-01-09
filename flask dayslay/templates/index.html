@@ -24,7 +24,7 @@
                 <a href="{{ url_for('index')}}">Home</a>
                 <a href="{{ url_for('about')}}">About</a>
                 <a href="#feature">Feature</a>
-                <a href="{{ url_for('index')}}">Contact</a>
+                <a href="#footer">Contact</a>
             </div>
             <div class="login">
                 {% if session.logged_in %}
@@ -50,7 +50,7 @@
             <h3>Your Digital  <br> Sanctuary</h3>
             <div class="slaytheday1">#SlayTheDay</div>
             {% if session.logged_in %}
-            <a href="{{ url_for('index')}}" class="btn">Try DaySlay Now!</a>
+            <a href="{{ url_for('notepage')}}" class="btn">Try DaySlay Now!</a>
         {% else %}
             <button onclick="showSignInMessage()" class="btn">Try DaySlay Now!</button>
         {% endif %}
@@ -125,7 +125,7 @@
  
     <!-- Footer -->
 
-    <section class="footer">
+    <section class="footer" id="footer">
 
         <div class="box-container">
 
