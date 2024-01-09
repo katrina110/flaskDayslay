@@ -393,7 +393,6 @@ body{
     transform: scale(1.15);
   }
 /* footer */
-
 .footer{
     background: var(--main-color);
 }
@@ -444,6 +443,7 @@ body{
 .footer .credit span{
     color: var(--primary-color);
 }
+
 
 /* our team end */
 
