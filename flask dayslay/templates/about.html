@@ -19,19 +19,19 @@
 <body>
     
     <header class="header">
-        <a href="#" class="logo"> <img class="guinea-pig" alt="" src="./image/logo-2@2x.png" /> DAYSLAY NOTE</a>
+        <a href="{{ url_for('index')}}" class="logo"> <img class="guinea-pig" alt="" src="./image/logo-2@2x.png" /> DAYSLAY NOTE</a>
 
         <nav class="navbar">
             <div id="close-navbar" class="fas fa-times"></div>
             <div>
                 <a href="{{ url_for('index')}}">Home</a>
                 <a href="{{ url_for('about')}}">About</a>
-                <a href="#feature">Feature</a>
+                <a href="{{ url_for('index') }}#feature">Feature</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="login">
                 <a href="#login">Login</a>
-            </div>
+            </div>  
         </nav>
 
         <div class="header-icons">
