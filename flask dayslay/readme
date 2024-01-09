@@ -1,12 +1,12 @@
 [Installation and runserver]
 1. install python if you haven't install yet
-1.1 go to your working dir 
+    1.1 go to your working dir 
 2. install flask
-    pip install flask
+        pip install flask
 3. execute the command 
-    python app.py    
-    The application will be accessible at http://127.0.0.1:5000/ by default.
-    Open your web browser and navigate to the above address.
+        python app.py    
+        The application will be accessible at http://127.0.0.1:5000/ by default.
+        Open your web browser and navigate to the above address.
 
 [Welcome to Dayslay]
 
@@ -18,10 +18,10 @@ Features:A detailed list of features available in the Flask Note App.
 Contact: Ways to get in touch with the developers or project maintainers.
 
 
-
 2. User Registration/Login:
     Click on "Register" to create a new account.
     Use the "Login" button to access your account.
+
 
 3. Note Management: After logging in, you can navigate to the "Notes" page.
 On the "Notes" page, you can view existing notes and add new ones.
@@ -30,6 +30,7 @@ On the "Notes" page, you can view existing notes and add new ones.
 5. Add Note: Click on the "Add Note" button to create a new note.
 Fill in the title, description, and content in the provided input boxes.
 Click "Save" to add the note.
+
 
 6. View Notes: On the "Notes" page, you can see a list of your existing notes.
 Click on a note to view its details
