@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form action="{{ url_for('register') }}" method="POST">
+            <h1>Registration</h1>
+            
+            {% if error %}
+                <div class="error-message">
+                    {{ error }}
+                </div>
+            {% endif %}
+            
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <box-icon type='solid' name='user'></box-icon>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <box-icon type='solid' name='user'></box-icon>
+                </div>
+
+                <div class="input-field">
+                    <input type="email" name="email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                    <box-icon name='envelope'></box-icon>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" name="password" placeholder="Password" required pattern="^(?=.*\d.*\d)[\s\S]{8,}$">
+                    <box-icon name='lock-alt' type='solid'></box-icon>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" name="password_confirm" placeholder="Confirm Password" required pattern="^(?=.*\d.*\d)[\s\S]{8,}$">
+                    <box-icon name='lock-alt' type='solid'></box-icon>
+                </div>
+            </div>
+
+            <label><input type="checkbox" name="declaration" required> I hereby declare that the information above provided is true and correct</label>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>
