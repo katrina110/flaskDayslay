@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!-- Custom CSS Link -->
-    <link rel="stylesheet"  typr="text/css" href="{{ url_for('static', filename= 'css.css')}}">
-    <link rel="stylesheet" typr="text/css" href="{{ url_for('static', filename= 'style.css')}}">
 </head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'style.css')}}">
+    </head>
 <body>
     
     <header class="header">
@@ -23,7 +24,7 @@
                 <a href="{{ url_for('index')}}">Home</a>
                 <a href="{{ url_for('about')}}">About</a>
                 <a href="#feature">Feature</a>
-                <a href="#contact">Contact</a>
+                <a href="{{ url_for('index')}}">Contact</a>
             </div>
             <div class="login">
                 {% if session.logged_in %}
@@ -48,7 +49,11 @@
         <div class="content">
             <h3>Your Digital  <br> Sanctuary</h3>
             <div class="slaytheday1">#SlayTheDay</div>
-            <a href="#" class="btn">Try DaySlay Now!</a>
+            {% if session.logged_in %}
+            <a href="{{ url_for('index')}}" class="btn">Try DaySlay Now!</a>
+        {% else %}
+            <button onclick="showSignInMessage()" class="btn">Try DaySlay Now!</button>
+        {% endif %}
         </div>
 
     </section>
@@ -160,6 +165,7 @@
 
 
     <!-- Custom JS Link -->
-    <script src="js/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/message.js') }}"></script>
 </body>
 </html>
