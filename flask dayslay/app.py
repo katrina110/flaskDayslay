@@ -73,6 +73,7 @@ def about():
 def notepage():
     return render_template('notepage.html')
 
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

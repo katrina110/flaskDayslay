@@ -19,7 +19,7 @@
 <body>
     
     <header class="header">
-        <a href="{{ url_for('index')}}" class="logo"> <img class="guinea-pig" alt="" src="static/img/logo-2@2x.png" /> DAYSLAY NOTE</a>
+      <a href="{{ url_for('index')}}" class="logo"> <img class="guinea-pig" alt="" src="{{ url_for('static', filename= 'logo=2@2x.jpg')}}"/> DAYSLAY NOTE</a>
 
         <nav class="navbar">
             <div id="close-navbar" class="fas fa-times"></div>
