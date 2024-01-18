@@ -231,15 +231,19 @@ body{
   font-weight: 500;
   margin-top: 20px;
 }
-.note{
+.note {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  word-wrap: break-word; 
 }
 
-.note .details{
-  max-height: 165px;
+.note .details {
+  max-height: none;
   overflow-y: auto;
+  width: 100%;
+  word-wrap: break-word; 
+  white-space: normal;
 }
 .note .details::-webkit-scrollbar,
 .popup textarea::-webkit-scrollbar{

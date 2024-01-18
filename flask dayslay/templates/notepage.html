@@ -15,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap"
     />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-w0MP6Zn8S5Ftd1eK1lDzCeqJjhPn6HB05sFiLpT0PE4HdI9l7FIqGqolSNwFUlfsDpysSU7rW4KAO4pU5qU4zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   </head>
   <body>
     <div class="sidebar">
@@ -72,28 +74,28 @@
           </li>
       </ul>
   </div>
-    <div class="popup-box">
-      <div class="popup">
-        <div class="content">
+  <div class="popup-box">
+    <div class="popup">
+       <div class="content">
           <header>
-            <p></p>
-            <i class="uil uil-times"></i>
+             <p>Title</p>
+             <i class="uil uil-times"></i>
           </header>
           <form action="#">
-            <div class="row title">
-              <label>Title</label>
-              <input type="text" spellcheck="false">
-            </div>
-            <div class="row description">
-              <label>Description</label>
-              <textarea spellcheck="false"></textarea>
-            </div>
-            <button></button>
+             <div class="row title">
+                <label>Title</label>
+                <input type="text" spellcheck="false">
+             </div>
+             <div class="row description">
+                <label>Description</label>
+                <textarea spellcheck="false"></textarea>
+             </div>
+             <button onclick="saveNote()">Save Note</button>
           </form>
-        </div>
-      </div>
+       </div>
     </div>
-    <div class="wrapper">
+ </div>
+     <div class="wrapper">
       <li class="add-box">
         <div class="icon"><i class="uil uil-plus"></i></div>
         <p>Add new note</p>
@@ -101,6 +103,7 @@
     </div>
 
     <script src="{{ url_for('static', filename='js/notescript.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-3m1Ezr6KpPh/xe1XZ6s5Juvl9eO6p6W/3oRyu4c4UuA3e5sY9EvkD4P5FX8kNYMxhvYGSuTp9+F76G+ZEN6SSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     
   </body>
