@@ -7,8 +7,8 @@
     <title>DaySlayNote</title>
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty@3.1.4/lib/noty.css">   
     
-    <!-- Custom CSS Link -->
 </head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'style.css')}}">
@@ -140,7 +140,7 @@
                 <img src="static/img/footer-2.png" alt="">
                 <h3>E-mail</h3>
                 <a href="#" class="link">DaySlay.com</a>
-                <a href="#" class="link">DaySlay@gmail.com</a>
+                <a href="mailto:DaySlay@gmail.com?subject= Subject for DaySlay" class="link">DaySlay@gmail.com</a>
             </div>
     
             <div class="box">
@@ -159,7 +159,7 @@
         </div>
 
         <div class="credit">created by <span>Pink GuineaPig</span> | all rights reserved! </div>
-
+        
     </section>
 
 
@@ -167,5 +167,6 @@
     <!-- Custom JS Link -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/message.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/noty@3.1.4/lib/noty.min.js"></script>
 </body>
 </html>

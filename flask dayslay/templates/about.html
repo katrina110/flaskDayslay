@@ -30,9 +30,13 @@
                 <a href="#footer">Contact</a>
             </div>
             <div class="login">
-                <a href="#login">Login</a>
-            </div>  
-        </nav>
+              {% if session.logged_in %}
+                  <a href="{{ url_for('logout') }}">Logout</a>
+              {% else %}
+                  <a href="{{ url_for('login') }}">Login</a>
+              {% endif %}
+          </div>
+      </nav>
 
         <div class="header-icons">
             <div id="hover-btn" class="fas fa-bars"></div>
