@@ -45,9 +45,9 @@ body{
     background: var(--main-color);
 }
 
-/* section{
+section{
     padding: 2rem 7%;
-} */
+}   
 
 .heading{
     text-align: center;
@@ -393,6 +393,8 @@ body{
     transform: scale(1.15);
   }
 /* footer */
+/* Footer */
+
 .footer{
     background: var(--main-color);
 }
