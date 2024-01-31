@@ -73,6 +73,10 @@ def about():
 def notepage():
     return render_template('notepage.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 
 if __name__ == '__main__':
     with app.app_context():
