@@ -2,10 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SECRET_KEY'] = 'your_secret_key'
 db = SQLAlchemy(app)
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -28,6 +30,7 @@ def login():
 
         if user and check_password_hash(user.password, password):
             session['logged_in'] = True
+            session['username'] = user.username  # Store username in session
             return redirect(url_for('index'))
         else:
             error = 'Invalid email or password. Please try again.'
@@ -37,6 +40,7 @@ def login():
 @app.route('/logout')
 def logout():
     session['logged_in'] = False
+    session.pop('username', None)  # Remove username from session
     return redirect(url_for('index'))
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -61,6 +65,7 @@ def register():
             db.session.commit()
 
             session['logged_in'] = True
+            session['username'] = username  # Store username in session
             return redirect(url_for('index'))
 
     return render_template('register.html', error=error)
@@ -71,12 +76,15 @@ def about():
 
 @app.route('/notepage')
 def notepage():
-    return render_template('notepage.html')
+    if 'logged_in' in session:
+        username = session['username']
+        return render_template('notepage.html', username=username)
+    else:
+        return redirect(url_for('login'))
 
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
-
 
 if __name__ == '__main__':
     with app.app_context():

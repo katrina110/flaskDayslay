@@ -357,8 +357,13 @@
 
   <div class="side-menu">
     <center> <img src="static/img/profile.jpg"> <br><br>
-      <h2>Username</h2>
-    </center> <br> <a href="{{ url_for('index')}}"><i class="fa fa-user"></i><span>Home</span></a> <a href=" {{ url_for('about')}}"><i class="fa fa-info-circle"></i><span>About</span></a><a href="{{ url_for('about') }}#footer"><i class="fa fa-phone"></i><span>Contact Us</span></a> <a href="#"><i class="fa fa-cog"></i><span>Setting</span></a> <a href="#" class="Logout"><span>Logout</span></a>
+      <h2>{{ username }}</h2>
+    </center> <br> 
+    <a href="{{ url_for('index')}}"><i class="fa fa-user"></i><span>Home</span></a> 
+    <a href="{{ url_for('about')}}"><i class="fa fa-info-circle"></i><span>About</span></a>
+    <a href="{{ url_for('contact') }}#footer"><i class="fa fa-phone"></i><span>Contact Us</span></a> 
+    <a href="#"><i class="fa fa-cog"></i><span>Setting</span></a> 
+    <a href="{{ url_for('logout') }}" class="Logout"><span>Logout</span></a>
   </div>
 
   <div class="popup-box">
